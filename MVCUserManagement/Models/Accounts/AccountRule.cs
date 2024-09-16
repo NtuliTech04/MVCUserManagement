@@ -1,5 +1,5 @@
 ﻿
-namespace UserManagement.Models
+namespace MVCUserManagement.Models
 {
     public class AccountRule
     {

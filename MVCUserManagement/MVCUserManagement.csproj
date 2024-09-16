@@ -174,14 +174,14 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Persistence\Migrations\Configuration.cs" />
     <Compile Include="Utilities\Constants.cs" />
     <Compile Include="Infrastructure\UserSession.cs" />
     <Compile Include="Models\Accounts\AccountRule.cs" />
     <Compile Include="Models\Accounts\UserRole.cs" />
     <Compile Include="Models\Accounts\User.cs" />
-    <Compile Include="Persistance\Configurations\EntityConfigurations.cs" />
-    <Compile Include="Persistance\Context\UserManagementDbContext.cs" />
+    <Compile Include="Persistence\Configurations\EntityConfigurations.cs" />
+    <Compile Include="Persistence\Context\UserManagementDbContext.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -248,7 +248,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Persistance\Data\" />
+    <Folder Include="Persistence\Data\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\bootstrap.rtl.min.css.map" />

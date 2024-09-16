@@ -1,4 +1,4 @@
-﻿namespace UserManagement.Utilities
+﻿namespace MVCUserManagement.Utilities
 {
     public class RegexExpression
     {

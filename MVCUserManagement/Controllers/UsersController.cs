@@ -2,8 +2,8 @@
 using System.Linq;
 using System.Net;
 using System.Web.Mvc;
-using UserManagement.Models;
-using UserManagement.Persistance.Context;
+using MVCUserManagement.Models;
+using MVCUserManagement.Persistence.Context;
 
 namespace MVCUserManagement.Controllers
 {

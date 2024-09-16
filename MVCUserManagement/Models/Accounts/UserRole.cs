@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace UserManagement.Models
+namespace MVCUserManagement.Models
 {
     //[Validator(typeof(RoleValidation))]
     public class UserRole

@@ -1,15 +1,15 @@
 ﻿using System.Data.Entity;
-using UserManagement.Models;
-using UserManagement.Persistance.Configurations;
-//using MVCUserManagement.Migrations;
+using MVCUserManagement.Persistence.Migrations;
+using MVCUserManagement.Persistence.Configurations;
+using MVCUserManagement.Models;
 
-namespace UserManagement.Persistance.Context
+namespace MVCUserManagement.Persistence.Context
 {
     public class UserManagementDbContext : DbContext
     {
         public UserManagementDbContext() : base("name=MVCUserManagementDB")
         {
-            //Database.SetInitializer(new MigrateDatabaseToLatestVersion<UserManagementDbContext, Configuration>());
+            Database.SetInitializer(new MigrateDatabaseToLatestVersion<UserManagementDbContext, Configuration>());
             //Database.SetInitializer(new DropCreateDatabaseIfModelChanges<UserManagementDbContext>());
             //Database.SetInitializer<UserManagementDbContext>(new CreateDatabaseIfNotExists<UserManagementDbContext>());
         }

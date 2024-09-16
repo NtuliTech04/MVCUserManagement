@@ -1,8 +1,7 @@
-﻿
-using System.Data.Entity;
-using UserManagement.Models;
+﻿using System.Data.Entity;
+using MVCUserManagement.Models;
 
-namespace UserManagement.Persistance.Configurations
+namespace MVCUserManagement.Persistence.Configurations
 {
     public class EntityConfigurations
     {

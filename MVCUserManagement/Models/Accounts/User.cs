@@ -1,10 +1,9 @@
-﻿
-using FluentValidation;
+﻿using FluentValidation;
 using FluentValidation.Attributes;
 using System;
-using UserManagement.Utilities;
+using MVCUserManagement.Utilities;
 
-namespace UserManagement.Models
+namespace MVCUserManagement.Models
 {
     [Validator(typeof(UserValidation))]
     public class User
@@ -69,5 +68,4 @@ namespace UserManagement.Models
                 .When(r => r.ProfilePhoto != null);
         }
     }
-
 }
