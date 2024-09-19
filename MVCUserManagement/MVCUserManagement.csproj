@@ -64,6 +64,12 @@
     <Reference Include="FluentValidation.WebApi, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7de548da2fbae0f0, processorArchitecture=MSIL">
       <HintPath>..\packages\FluentValidation.WebApi.8.6.1\lib\net45\FluentValidation.WebApi.dll</HintPath>
     </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.Identity.Core.2.2.4\lib\net45\Microsoft.AspNet.Identity.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.EntityFramework, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.Identity.EntityFramework.2.2.4\lib\net45\Microsoft.AspNet.Identity.EntityFramework.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="Microsoft.Extensions.DependencyInjection.Abstractions, Version=2.1.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.Extensions.DependencyInjection.Abstractions.2.1.0\lib\netstandard2.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll</HintPath>
@@ -163,6 +169,8 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Abstractions\Interfaces\IUserRoles.cs" />
+    <Compile Include="Abstractions\Repositories\UserRolesRepository.cs" />
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
@@ -174,9 +182,12 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Infrastructure\Authentication\Enums\RoleOptions.cs" />
+    <Compile Include="Infrastructure\Authentication\Seeds\DefaultRoles.cs" />
+    <Compile Include="Infrastructure\Authentication\Seeds\DefaultUsers.cs" />
     <Compile Include="Persistence\Migrations\Configuration.cs" />
     <Compile Include="Utilities\Constants.cs" />
-    <Compile Include="Infrastructure\Authentication\UserSession.cs" />
+    <Compile Include="Infrastructure\Authentication\Tokens\UserSession.cs" />
     <Compile Include="Models\Accounts\AccountRule.cs" />
     <Compile Include="Models\Accounts\UserRole.cs" />
     <Compile Include="Models\Accounts\User.cs" />
@@ -247,8 +258,6 @@
     <Content Include="Views\UserRoles\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Abstractions\Interfaces\" />
-    <Folder Include="Abstractions\Repositories\" />
     <Folder Include="App_Data\" />
     <Folder Include="Infrastructure\Services\" />
     <Folder Include="Persistence\Data\" />
