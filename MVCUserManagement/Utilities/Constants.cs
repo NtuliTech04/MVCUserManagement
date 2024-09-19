@@ -31,5 +31,4 @@
         //Value to convert bytes to megabytes
         public const int ToMegabytes = 1048576;
     }
-
 }

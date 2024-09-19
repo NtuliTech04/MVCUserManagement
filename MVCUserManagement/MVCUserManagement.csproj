@@ -176,7 +176,7 @@
     </Compile>
     <Compile Include="Persistence\Migrations\Configuration.cs" />
     <Compile Include="Utilities\Constants.cs" />
-    <Compile Include="Infrastructure\UserSession.cs" />
+    <Compile Include="Infrastructure\Authentication\UserSession.cs" />
     <Compile Include="Models\Accounts\AccountRule.cs" />
     <Compile Include="Models\Accounts\UserRole.cs" />
     <Compile Include="Models\Accounts\User.cs" />
@@ -247,7 +247,10 @@
     <Content Include="Views\UserRoles\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="Abstractions\Interfaces\" />
+    <Folder Include="Abstractions\Repositories\" />
     <Folder Include="App_Data\" />
+    <Folder Include="Infrastructure\Services\" />
     <Folder Include="Persistence\Data\" />
   </ItemGroup>
   <ItemGroup>
