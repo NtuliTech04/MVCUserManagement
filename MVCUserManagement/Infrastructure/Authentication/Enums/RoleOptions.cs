@@ -1,10 +1,12 @@
-﻿namespace MVCUserManagement.Infrastructure.Authentication.Enums
+﻿using System.ComponentModel;
+
+namespace MVCUserManagement.Infrastructure.Authentication.Enums
 {
     public enum RoleOptions
     {
-        SuperAdmin,
-        Admin,
+        Superadmin,
+        Administrator,
         Moderator,
-        User
+        Enduser
     }
 }

@@ -1,32 +1,23 @@
-﻿using Microsoft.Ajax.Utilities;
-using Microsoft.AspNet.Identity;
-using Microsoft.AspNet.Identity.EntityFramework;
-using MVCUserManagement.Abstractions.Interfaces;
+﻿using MVCUserManagement.Abstractions;
+using MVCUserManagement.Abstractions.Repositories;
 using MVCUserManagement.Infrastructure.Authentication.Enums;
-using MVCUserManagement.Models;
 using MVCUserManagement.Persistence.Context;
-using System.Linq;
 using System.Threading.Tasks;
+using System.Linq;
 
 namespace MVCUserManagement.Infrastructure.Authentication.Seeds
 {
     public class DefaultRoles
     {
-        private readonly UserManagementDbContext _context;
-        private readonly IUserRoles _roles;
-        public DefaultRoles(IUserRoles userRoles, UserManagementDbContext dbContext)
-        {
-            _roles = userRoles;
-            _context = dbContext;
-        }
-        
+        private readonly UserManagementDbContext _context = new UserManagementDbContext();
+        private readonly IUserRolesRepository _roles = new UserRolesRepository();
 
         public async Task SeedUserRoles()
         {
             if (!_context.UserRoles.Any())
             {
-                await _roles.CreateRoleAsync(new UserRole(RoleOptions.Admin.ToString()));
-                await _roles.CreateRoleAsync(new UserRole(RoleOptions.User.ToString()));
+                await _roles.SeedRoleAsync(RoleOptions.Superadmin.ToString());
+                await _roles.SeedRoleAsync(RoleOptions.Enduser.ToString());
             }
         }
     }

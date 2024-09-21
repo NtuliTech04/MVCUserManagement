@@ -43,7 +43,7 @@ namespace MVCUserManagement.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "RoleId")] UserRole userRole)
+        public ActionResult Create([Bind(Include = "RoleId,RoleName,RoleDescription")] UserRole userRole)
         {
             if (ModelState.IsValid)
             {
@@ -75,7 +75,7 @@ namespace MVCUserManagement.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "RoleId")] UserRole userRole)
+        public ActionResult Edit([Bind(Include = "RoleId,RoleName,RoleDescription")] UserRole userRole)
         {
             if (ModelState.IsValid)
             {

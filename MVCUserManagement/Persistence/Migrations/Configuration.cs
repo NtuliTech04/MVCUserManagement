@@ -1,8 +1,9 @@
 ﻿namespace MVCUserManagement.Persistence.Migrations
 {
+    using MVCUserManagement.Infrastructure.Authentication.Seeds;
     using System.Data.Entity.Migrations;
 
-    internal sealed class Configuration : DbMigrationsConfiguration<MVCUserManagement.Persistence.Context.UserManagementDbContext>
+    internal sealed class Configuration : DbMigrationsConfiguration<Context.UserManagementDbContext>
     {
         public Configuration()
         {
@@ -10,12 +11,9 @@
             AutomaticMigrationDataLossAllowed = true;
         }
 
-        protected override void Seed(MVCUserManagement.Persistence.Context.UserManagementDbContext context)
+        protected async override void Seed(Context.UserManagementDbContext context)
         {
-            //  This method will be called after migrating to the latest version.
-
-            //  You can use the DbSet<T>.AddOrUpdate() helper extension method
-            //  to avoid creating duplicate seed data.
+           await new DefaultRoles().SeedUserRoles();
         }
     }
 }
