@@ -1,5 +1,4 @@
-﻿using MVCUserManagement.Models;
-using MVCUserManagement.Persistence.Context;
+﻿using MVCUserManagement.Persistence.Context;
 using System.Threading.Tasks;
 
 namespace MVCUserManagement.Abstractions.Repositories
@@ -10,8 +9,7 @@ namespace MVCUserManagement.Abstractions.Repositories
 
         public async Task SeedRoleAsync(string roleName)
         {
-            _context.UserRoles.Add(new UserRole { RoleName = roleName });
-            await _context.SaveChangesAsync();
+             await _context.InsertUserRole(roleName, null);
         }
     }
 }
