@@ -11,13 +11,13 @@ namespace MVCUserManagement.Abstractions.Repositories
 
         public async Task SeedRoleAsync(string roleName)
         {
-             await _context.InsertUserRole(roleName, null);
+             await _context.spInsertUserRole(roleName, null);
         }
 
 
         public async Task<int> CreateRoleAsync(UserRole userRole)
         {
-             return await _context.InsertUserRole(userRole.RoleName, userRole.RoleDescription);
+             return await _context.spInsertUserRole(userRole.RoleName, userRole.RoleDescription);
         }
     }
 }

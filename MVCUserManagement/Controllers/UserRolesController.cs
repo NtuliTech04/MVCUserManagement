@@ -21,9 +21,8 @@ namespace MVCUserManagement.Controllers
         [HttpGet]
         public async Task<ActionResult> ListRoles()
         {
-            return View(await _context.UserRoles.ToListAsync());
+            return View(await _context.spListUserRoles());
         }
-
 
 
         [HttpGet]
