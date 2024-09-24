@@ -5,6 +5,7 @@ using MVCUserManagement.Models;
 using System.Data.SqlClient;
 using System;
 using System.Threading.Tasks;
+using System.Collections.Generic;
 
 namespace MVCUserManagement.Persistence.Context
 {
@@ -33,12 +34,18 @@ namespace MVCUserManagement.Persistence.Context
         public DbSet<UserRole> UserRoles { get; set; }
 
 
-        public async Task<int> InsertUserRole(string roleName, string roleDescription)
+        public async Task<int> spInsertUserRole(string roleName, string roleDescription)
         {
             var roleNameParameter = new SqlParameter("@RoleName", roleName);
             var roleDescriptionParameter = new SqlParameter("@RoleDescription", string.IsNullOrEmpty(roleDescription) ? DBNull.Value : (object)roleDescription);
 
             return await this.Database.ExecuteSqlCommandAsync("EXEC spInsertUserRole @RoleName, @RoleDescription", roleNameParameter, roleDescriptionParameter);
+        }
+
+
+        public async Task<List<UserRole>> spListUserRoles()
+        {
+            return await Database.SqlQuery<UserRole>("spListUserRoles").ToListAsync();
         }
     }
 }
