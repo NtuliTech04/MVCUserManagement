@@ -1,14 +1,14 @@
 USE [UserManagement]
 GO
 
-/****** Object:  StoredProcedure [dbo].[spspInsertUserRole]    Script Date: 22/09/2024 12:49:22 PM ******/
+/****** Object:  StoredProcedure [dbo].[spInsertUserRole]    Script Date: 22/09/2024 12:49:22 PM ******/
 SET ANSI_NULLS ON
 GO
 
 SET QUOTED_IDENTIFIER ON
 GO
 
-CREATE PROCEDURE [dbo].[spspInsertUserRole]
+CREATE PROCEDURE [dbo].[spInsertUserRole]
 	@RoleName nvarchar(30),
 	@RoleDescription nvarchar(255) = null
 AS

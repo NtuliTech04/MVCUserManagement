@@ -3,6 +3,9 @@
 ##
 ## Get latest from https://github.com/github/gitignore/blob/master/VisualStudio.gitignore
 
+#Web Config file
+/MVCUserManagement/Web.config
+
 # User-specific files
 *.rsuser
 *.suo

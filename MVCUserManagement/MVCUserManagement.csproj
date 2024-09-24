@@ -221,7 +221,7 @@
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
-    <Content Include="Persistence\Scripts\dbo.spListUserRoles.sql" />
+    <Content Include="Persistence\Scripts\spListUserRoles.sql" />
     <Content Include="Persistence\Scripts\spInsertUserRole.sql" />
     <Content Include="Scripts\bootstrap.bundle.js" />
     <Content Include="Scripts\bootstrap.bundle.min.js" />

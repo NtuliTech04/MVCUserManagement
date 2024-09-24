@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Data.Entity;
-using System.Linq;
-using System.Net;
 using System.Threading.Tasks;
 using System.Web.Mvc;
 using MVCUserManagement.Abstractions;
@@ -28,7 +24,9 @@ namespace MVCUserManagement.Controllers
         [HttpGet]
         public async Task<ActionResult> AddRole()
         {
-            return await Task.Run(() => View());
+            return await Task.Run(() => 
+                View()
+            );
         }
 
 

@@ -1,6 +1,5 @@
 ﻿using MVCUserManagement.Models;
 using MVCUserManagement.Persistence.Context;
-using System;
 using System.Threading.Tasks;
 
 namespace MVCUserManagement.Abstractions.Repositories

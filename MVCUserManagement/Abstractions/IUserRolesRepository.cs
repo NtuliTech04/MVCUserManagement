@@ -8,5 +8,4 @@ namespace MVCUserManagement.Abstractions
         Task SeedRoleAsync(string roleName);
         Task<int> CreateRoleAsync(UserRole userRole);
     }
-    
 }
